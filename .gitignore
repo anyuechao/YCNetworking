@@ -1,0 +1,8 @@
+YCNetworking.xcodeproj/xcuserdata/
+YCNetworking.xcworkspace/
+Pods/
+*.sup
+Podfile.lock
+.DS_Store
+YCNetworking.xcodeproj/project.xcworkspace/xcuserdata/
+

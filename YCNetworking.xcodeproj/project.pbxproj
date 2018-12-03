@@ -1,0 +1,688 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3E71E5CEC865E52A9A0B5FA4 /* libPods-YCNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 658810B31204846AB2739AA9 /* libPods-YCNetworking.a */; };
+		40C3E2AA21B4BA260023A0E5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C3E2A921B4BA260023A0E5 /* AppDelegate.m */; };
+		40C3E2AD21B4BA260023A0E5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C3E2AC21B4BA260023A0E5 /* ViewController.m */; };
+		40C3E2B021B4BA260023A0E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40C3E2AE21B4BA260023A0E5 /* Main.storyboard */; };
+		40C3E2B221B4BA270023A0E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40C3E2B121B4BA270023A0E5 /* Assets.xcassets */; };
+		40C3E2B521B4BA270023A0E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40C3E2B321B4BA270023A0E5 /* LaunchScreen.storyboard */; };
+		40C3E2B821B4BA270023A0E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C3E2B721B4BA270023A0E5 /* main.m */; };
+		40C3E2FE21B4BA980023A0E5 /* YCNetworkLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C3E2C421B4BA980023A0E5 /* YCNetworkLogger.m */; };
+		40C3E2FF21B4BA980023A0E5 /* UIDevice+deviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C3E2C521B4BA980023A0E5 /* UIDevice+deviceInfo.m */; };
+		40C3E30021B4BA980023A0E5 /* YCDebugMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C3E2C621B4BA980023A0E5 /* YCDebugMessage.m */; };
+		40C3E30121B4BA980023A0E5 /* NSNull+ToDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C3E2C721B4BA980023A0E5 /* NSNull+ToDictionary.m */; };
+		40C3E30221B4BA980023A0E5 /* iPhoneTypeDefine.plist in Resources */ = {isa = PBXBuildFile; fileRef = 40C3E2C821B4BA980023A0E5 /* iPhoneTypeDefine.plist */; };
+		40C3E30321B4BA980023A0E5 /* YCNetworkLoggerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C3E2CA21B4BA980023A0E5 /* YCNetworkLoggerConfig.m */; };
+		40C3E30421B4BA980023A0E5 /* YCNetworkPolicyConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C3E2CF21B4BA980023A0E5 /* YCNetworkPolicyConfig.m */; };
+		40C3E30521B4BA980023A0E5 /* YCFormDataConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C3E2D021B4BA980023A0E5 /* YCFormDataConfig.m */; };
+		40C3E30621B4BA980023A0E5 /* YCNetworkRequestConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C3E2D221B4BA980023A0E5 /* YCNetworkRequestConfig.m */; };
+		40C3E30721B4BA980023A0E5 /* YCNetworkTipsConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C3E2D321B4BA980023A0E5 /* YCNetworkTipsConfig.m */; };
+		40C3E30821B4BA980023A0E5 /* YCNetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C3E2D421B4BA980023A0E5 /* YCNetworkConfig.m */; };
+		40C3E30921B4BA980023A0E5 /* YCSecurityPolicyConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C3E2D821B4BA980023A0E5 /* YCSecurityPolicyConfig.m */; };
+		40C3E30A21B4BA980023A0E5 /* YCAPICenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C3E2DC21B4BA980023A0E5 /* YCAPICenter.m */; };
+		40C3E30B21B4BA980023A0E5 /* YCBaseObjReformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C3E2DE21B4BA980023A0E5 /* YCBaseObjReformer.m */; };
+		40C3E30C21B4BA980023A0E5 /* YCURLResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C3E2E221B4BA980023A0E5 /* YCURLResult.m */; };
+		40C3E30D21B4BA980023A0E5 /* YCURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C3E2E621B4BA980023A0E5 /* YCURLResponse.m */; };
+		40C3E30E21B4BA980023A0E5 /* YCRequestGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C3E2E921B4BA980023A0E5 /* YCRequestGroup.m */; };
+		40C3E30F21B4BA980023A0E5 /* YCTaskRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C3E2EC21B4BA980023A0E5 /* YCTaskRequest.m */; };
+		40C3E31021B4BA980023A0E5 /* YCAPIRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C3E2F021B4BA980023A0E5 /* YCAPIRequest.m */; };
+		40C3E31121B4BA980023A0E5 /* YCURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C3E2F421B4BA980023A0E5 /* YCURLRequest.m */; };
+		40C3E31221B4BA980023A0E5 /* YCNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C3E2F821B4BA980023A0E5 /* YCNetworkManager.m */; };
+		40C3E31321B4BA980023A0E5 /* YCNetworkEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C3E2FD21B4BA980023A0E5 /* YCNetworkEngine.m */; };
+		40C3E31621B4BAF30023A0E5 /* YCAPICenter+home.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C3E31521B4BAF30023A0E5 /* YCAPICenter+home.m */; };
+		40C3E31921B4BAF80023A0E5 /* YCPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C3E31721B4BAF80023A0E5 /* YCPresenter.m */; };
+		40C3E31C21B4BAFE0023A0E5 /* YCRequestPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C3E31B21B4BAFE0023A0E5 /* YCRequestPresenter.m */; };
+		40C3E31F21B4BB040023A0E5 /* YCTakePhotoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C3E31E21B4BB040023A0E5 /* YCTakePhotoTool.m */; };
+		40C3E32321B4BF070023A0E5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 40C3E32121B4BF070023A0E5 /* README.md */; };
+		40C3E32421B4BF070023A0E5 /* YCNetworking.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 40C3E32221B4BF070023A0E5 /* YCNetworking.podspec */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		213CB90B605CF0DCDFA6AEC3 /* Pods-YCNetworking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YCNetworking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YCNetworking/Pods-YCNetworking.debug.xcconfig"; sourceTree = "<group>"; };
+		40C3E2A521B4BA260023A0E5 /* YCNetworking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YCNetworking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		40C3E2A821B4BA260023A0E5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		40C3E2A921B4BA260023A0E5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		40C3E2AB21B4BA260023A0E5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		40C3E2AC21B4BA260023A0E5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		40C3E2AF21B4BA260023A0E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		40C3E2B121B4BA270023A0E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		40C3E2B421B4BA270023A0E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		40C3E2B621B4BA270023A0E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40C3E2B721B4BA270023A0E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		40C3E2C021B4BA980023A0E5 /* YCDebugMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCDebugMessage.h; sourceTree = "<group>"; };
+		40C3E2C121B4BA980023A0E5 /* UIDevice+deviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+deviceInfo.h"; sourceTree = "<group>"; };
+		40C3E2C221B4BA980023A0E5 /* NSNull+ToDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNull+ToDictionary.h"; sourceTree = "<group>"; };
+		40C3E2C321B4BA980023A0E5 /* YCNetworkLoggerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCNetworkLoggerConfig.h; sourceTree = "<group>"; };
+		40C3E2C421B4BA980023A0E5 /* YCNetworkLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCNetworkLogger.m; sourceTree = "<group>"; };
+		40C3E2C521B4BA980023A0E5 /* UIDevice+deviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+deviceInfo.m"; sourceTree = "<group>"; };
+		40C3E2C621B4BA980023A0E5 /* YCDebugMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCDebugMessage.m; sourceTree = "<group>"; };
+		40C3E2C721B4BA980023A0E5 /* NSNull+ToDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNull+ToDictionary.m"; sourceTree = "<group>"; };
+		40C3E2C821B4BA980023A0E5 /* iPhoneTypeDefine.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = iPhoneTypeDefine.plist; sourceTree = "<group>"; };
+		40C3E2C921B4BA980023A0E5 /* YCNetworkLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCNetworkLogger.h; sourceTree = "<group>"; };
+		40C3E2CA21B4BA980023A0E5 /* YCNetworkLoggerConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCNetworkLoggerConfig.m; sourceTree = "<group>"; };
+		40C3E2CC21B4BA980023A0E5 /* YCNetworkTipsConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCNetworkTipsConfig.h; sourceTree = "<group>"; };
+		40C3E2CD21B4BA980023A0E5 /* YCNetworkConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCNetworkConfig.h; sourceTree = "<group>"; };
+		40C3E2CE21B4BA980023A0E5 /* YCNetworkConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCNetworkConst.h; sourceTree = "<group>"; };
+		40C3E2CF21B4BA980023A0E5 /* YCNetworkPolicyConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCNetworkPolicyConfig.m; sourceTree = "<group>"; };
+		40C3E2D021B4BA980023A0E5 /* YCFormDataConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCFormDataConfig.m; sourceTree = "<group>"; };
+		40C3E2D121B4BA980023A0E5 /* YCSecurityPolicyConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCSecurityPolicyConfig.h; sourceTree = "<group>"; };
+		40C3E2D221B4BA980023A0E5 /* YCNetworkRequestConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCNetworkRequestConfig.m; sourceTree = "<group>"; };
+		40C3E2D321B4BA980023A0E5 /* YCNetworkTipsConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCNetworkTipsConfig.m; sourceTree = "<group>"; };
+		40C3E2D421B4BA980023A0E5 /* YCNetworkConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCNetworkConfig.m; sourceTree = "<group>"; };
+		40C3E2D521B4BA980023A0E5 /* YCNetworkMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCNetworkMacro.h; sourceTree = "<group>"; };
+		40C3E2D621B4BA980023A0E5 /* YCNetworkPolicyConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCNetworkPolicyConfig.h; sourceTree = "<group>"; };
+		40C3E2D721B4BA980023A0E5 /* YCNetworkRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCNetworkRequestConfig.h; sourceTree = "<group>"; };
+		40C3E2D821B4BA980023A0E5 /* YCSecurityPolicyConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCSecurityPolicyConfig.m; sourceTree = "<group>"; };
+		40C3E2D921B4BA980023A0E5 /* YCFormDataConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCFormDataConfig.h; sourceTree = "<group>"; };
+		40C3E2DB21B4BA980023A0E5 /* YCBaseObjReformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCBaseObjReformer.h; sourceTree = "<group>"; };
+		40C3E2DC21B4BA980023A0E5 /* YCAPICenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCAPICenter.m; sourceTree = "<group>"; };
+		40C3E2DD21B4BA980023A0E5 /* YCAPIMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCAPIMacro.h; sourceTree = "<group>"; };
+		40C3E2DE21B4BA980023A0E5 /* YCBaseObjReformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCBaseObjReformer.m; sourceTree = "<group>"; };
+		40C3E2DF21B4BA980023A0E5 /* YCAPICenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCAPICenter.h; sourceTree = "<group>"; };
+		40C3E2E221B4BA980023A0E5 /* YCURLResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCURLResult.m; sourceTree = "<group>"; };
+		40C3E2E321B4BA980023A0E5 /* YCURLResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCURLResult.h; sourceTree = "<group>"; };
+		40C3E2E521B4BA980023A0E5 /* YCURLResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCURLResponse.h; sourceTree = "<group>"; };
+		40C3E2E621B4BA980023A0E5 /* YCURLResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCURLResponse.m; sourceTree = "<group>"; };
+		40C3E2E921B4BA980023A0E5 /* YCRequestGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCRequestGroup.m; sourceTree = "<group>"; };
+		40C3E2EA21B4BA980023A0E5 /* YCRequestGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCRequestGroup.h; sourceTree = "<group>"; };
+		40C3E2EC21B4BA980023A0E5 /* YCTaskRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCTaskRequest.m; sourceTree = "<group>"; };
+		40C3E2ED21B4BA980023A0E5 /* YCTaskRequest_InternalParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCTaskRequest_InternalParams.h; sourceTree = "<group>"; };
+		40C3E2EE21B4BA980023A0E5 /* YCTaskRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCTaskRequest.h; sourceTree = "<group>"; };
+		40C3E2F021B4BA980023A0E5 /* YCAPIRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCAPIRequest.m; sourceTree = "<group>"; };
+		40C3E2F121B4BA980023A0E5 /* YCAPIRequest_InternalParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCAPIRequest_InternalParams.h; sourceTree = "<group>"; };
+		40C3E2F221B4BA980023A0E5 /* YCAPIRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCAPIRequest.h; sourceTree = "<group>"; };
+		40C3E2F421B4BA980023A0E5 /* YCURLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCURLRequest.m; sourceTree = "<group>"; };
+		40C3E2F521B4BA980023A0E5 /* YCURLRequest_InternalParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCURLRequest_InternalParams.h; sourceTree = "<group>"; };
+		40C3E2F621B4BA980023A0E5 /* YCURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCURLRequest.h; sourceTree = "<group>"; };
+		40C3E2F821B4BA980023A0E5 /* YCNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCNetworkManager.m; sourceTree = "<group>"; };
+		40C3E2F921B4BA980023A0E5 /* YCNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCNetworkManager.h; sourceTree = "<group>"; };
+		40C3E2FA21B4BA980023A0E5 /* YCNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCNetworking.h; sourceTree = "<group>"; };
+		40C3E2FC21B4BA980023A0E5 /* YCNetworkEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCNetworkEngine.h; sourceTree = "<group>"; };
+		40C3E2FD21B4BA980023A0E5 /* YCNetworkEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCNetworkEngine.m; sourceTree = "<group>"; };
+		40C3E31421B4BAF30023A0E5 /* YCAPICenter+home.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YCAPICenter+home.h"; sourceTree = "<group>"; };
+		40C3E31521B4BAF30023A0E5 /* YCAPICenter+home.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "YCAPICenter+home.m"; sourceTree = "<group>"; };
+		40C3E31721B4BAF80023A0E5 /* YCPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCPresenter.m; sourceTree = "<group>"; };
+		40C3E31821B4BAF80023A0E5 /* YCPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCPresenter.h; sourceTree = "<group>"; };
+		40C3E31A21B4BAFE0023A0E5 /* YCRequestPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCRequestPresenter.h; sourceTree = "<group>"; };
+		40C3E31B21B4BAFE0023A0E5 /* YCRequestPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCRequestPresenter.m; sourceTree = "<group>"; };
+		40C3E31D21B4BB030023A0E5 /* YCTakePhotoTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCTakePhotoTool.h; sourceTree = "<group>"; };
+		40C3E31E21B4BB040023A0E5 /* YCTakePhotoTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCTakePhotoTool.m; sourceTree = "<group>"; };
+		40C3E32121B4BF070023A0E5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		40C3E32221B4BF070023A0E5 /* YCNetworking.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = YCNetworking.podspec; sourceTree = SOURCE_ROOT; };
+		658810B31204846AB2739AA9 /* libPods-YCNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YCNetworking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9128B57D715ED756C0BD6CD /* Pods-YCNetworking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YCNetworking.release.xcconfig"; path = "Pods/Target Support Files/Pods-YCNetworking/Pods-YCNetworking.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		40C3E2A221B4BA260023A0E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E71E5CEC865E52A9A0B5FA4 /* libPods-YCNetworking.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		26B69161259F53DCD6C9D9FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				658810B31204846AB2739AA9 /* libPods-YCNetworking.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		40C3E29C21B4BA260023A0E5 = {
+			isa = PBXGroup;
+			children = (
+				40C3E2A721B4BA260023A0E5 /* YCNetworking */,
+				40C3E2A621B4BA260023A0E5 /* Products */,
+				D2BC49B33BFAF61C178A4885 /* Pods */,
+				26B69161259F53DCD6C9D9FA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		40C3E2A621B4BA260023A0E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				40C3E2A521B4BA260023A0E5 /* YCNetworking.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		40C3E2A721B4BA260023A0E5 /* YCNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				40C3E32021B4BE620023A0E5 /* Podspec */,
+				40C3E2BE21B4BA980023A0E5 /* Source */,
+				40C3E2A821B4BA260023A0E5 /* AppDelegate.h */,
+				40C3E2A921B4BA260023A0E5 /* AppDelegate.m */,
+				40C3E2AB21B4BA260023A0E5 /* ViewController.h */,
+				40C3E2AC21B4BA260023A0E5 /* ViewController.m */,
+				40C3E31421B4BAF30023A0E5 /* YCAPICenter+home.h */,
+				40C3E31521B4BAF30023A0E5 /* YCAPICenter+home.m */,
+				40C3E31821B4BAF80023A0E5 /* YCPresenter.h */,
+				40C3E31721B4BAF80023A0E5 /* YCPresenter.m */,
+				40C3E31A21B4BAFE0023A0E5 /* YCRequestPresenter.h */,
+				40C3E31B21B4BAFE0023A0E5 /* YCRequestPresenter.m */,
+				40C3E31D21B4BB030023A0E5 /* YCTakePhotoTool.h */,
+				40C3E31E21B4BB040023A0E5 /* YCTakePhotoTool.m */,
+				40C3E2AE21B4BA260023A0E5 /* Main.storyboard */,
+				40C3E2B121B4BA270023A0E5 /* Assets.xcassets */,
+				40C3E2B321B4BA270023A0E5 /* LaunchScreen.storyboard */,
+				40C3E2B621B4BA270023A0E5 /* Info.plist */,
+				40C3E2B721B4BA270023A0E5 /* main.m */,
+			);
+			path = YCNetworking;
+			sourceTree = "<group>";
+		};
+		40C3E2BE21B4BA980023A0E5 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				40C3E2F721B4BA980023A0E5 /* Manager */,
+				40C3E2FB21B4BA980023A0E5 /* Engine */,
+				40C3E2CB21B4BA980023A0E5 /* Config */,
+				40C3E2E021B4BA980023A0E5 /* Generator */,
+				40C3E2BF21B4BA980023A0E5 /* Logger */,
+				40C3E2DA21B4BA980023A0E5 /* Center */,
+				40C3E2FA21B4BA980023A0E5 /* YCNetworking.h */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		40C3E2BF21B4BA980023A0E5 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				40C3E2C821B4BA980023A0E5 /* iPhoneTypeDefine.plist */,
+				40C3E2C221B4BA980023A0E5 /* NSNull+ToDictionary.h */,
+				40C3E2C721B4BA980023A0E5 /* NSNull+ToDictionary.m */,
+				40C3E2C121B4BA980023A0E5 /* UIDevice+deviceInfo.h */,
+				40C3E2C521B4BA980023A0E5 /* UIDevice+deviceInfo.m */,
+				40C3E2C021B4BA980023A0E5 /* YCDebugMessage.h */,
+				40C3E2C621B4BA980023A0E5 /* YCDebugMessage.m */,
+				40C3E2C921B4BA980023A0E5 /* YCNetworkLogger.h */,
+				40C3E2C421B4BA980023A0E5 /* YCNetworkLogger.m */,
+				40C3E2C321B4BA980023A0E5 /* YCNetworkLoggerConfig.h */,
+				40C3E2CA21B4BA980023A0E5 /* YCNetworkLoggerConfig.m */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
+		40C3E2CB21B4BA980023A0E5 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				40C3E2CD21B4BA980023A0E5 /* YCNetworkConfig.h */,
+				40C3E2D421B4BA980023A0E5 /* YCNetworkConfig.m */,
+				40C3E2D921B4BA980023A0E5 /* YCFormDataConfig.h */,
+				40C3E2D021B4BA980023A0E5 /* YCFormDataConfig.m */,
+				40C3E2CC21B4BA980023A0E5 /* YCNetworkTipsConfig.h */,
+				40C3E2D321B4BA980023A0E5 /* YCNetworkTipsConfig.m */,
+				40C3E2D121B4BA980023A0E5 /* YCSecurityPolicyConfig.h */,
+				40C3E2CF21B4BA980023A0E5 /* YCNetworkPolicyConfig.m */,
+				40C3E2D621B4BA980023A0E5 /* YCNetworkPolicyConfig.h */,
+				40C3E2D821B4BA980023A0E5 /* YCSecurityPolicyConfig.m */,
+				40C3E2D721B4BA980023A0E5 /* YCNetworkRequestConfig.h */,
+				40C3E2D221B4BA980023A0E5 /* YCNetworkRequestConfig.m */,
+				40C3E2CE21B4BA980023A0E5 /* YCNetworkConst.h */,
+				40C3E2D521B4BA980023A0E5 /* YCNetworkMacro.h */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		40C3E2DA21B4BA980023A0E5 /* Center */ = {
+			isa = PBXGroup;
+			children = (
+				40C3E2DF21B4BA980023A0E5 /* YCAPICenter.h */,
+				40C3E2DC21B4BA980023A0E5 /* YCAPICenter.m */,
+				40C3E2DB21B4BA980023A0E5 /* YCBaseObjReformer.h */,
+				40C3E2DE21B4BA980023A0E5 /* YCBaseObjReformer.m */,
+				40C3E2DD21B4BA980023A0E5 /* YCAPIMacro.h */,
+			);
+			path = Center;
+			sourceTree = "<group>";
+		};
+		40C3E2E021B4BA980023A0E5 /* Generator */ = {
+			isa = PBXGroup;
+			children = (
+				40C3E2E121B4BA980023A0E5 /* Result */,
+				40C3E2E421B4BA980023A0E5 /* Response */,
+				40C3E2E721B4BA980023A0E5 /* Request */,
+			);
+			path = Generator;
+			sourceTree = "<group>";
+		};
+		40C3E2E121B4BA980023A0E5 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				40C3E2E321B4BA980023A0E5 /* YCURLResult.h */,
+				40C3E2E221B4BA980023A0E5 /* YCURLResult.m */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
+		40C3E2E421B4BA980023A0E5 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				40C3E2E521B4BA980023A0E5 /* YCURLResponse.h */,
+				40C3E2E621B4BA980023A0E5 /* YCURLResponse.m */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		40C3E2E721B4BA980023A0E5 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				40C3E2E821B4BA980023A0E5 /* Group */,
+				40C3E2EB21B4BA980023A0E5 /* Task */,
+				40C3E2EF21B4BA980023A0E5 /* API */,
+				40C3E2F321B4BA980023A0E5 /* Base */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		40C3E2E821B4BA980023A0E5 /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				40C3E2EA21B4BA980023A0E5 /* YCRequestGroup.h */,
+				40C3E2E921B4BA980023A0E5 /* YCRequestGroup.m */,
+			);
+			path = Group;
+			sourceTree = "<group>";
+		};
+		40C3E2EB21B4BA980023A0E5 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				40C3E2EE21B4BA980023A0E5 /* YCTaskRequest.h */,
+				40C3E2EC21B4BA980023A0E5 /* YCTaskRequest.m */,
+				40C3E2ED21B4BA980023A0E5 /* YCTaskRequest_InternalParams.h */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		40C3E2EF21B4BA980023A0E5 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				40C3E2F221B4BA980023A0E5 /* YCAPIRequest.h */,
+				40C3E2F021B4BA980023A0E5 /* YCAPIRequest.m */,
+				40C3E2F121B4BA980023A0E5 /* YCAPIRequest_InternalParams.h */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		40C3E2F321B4BA980023A0E5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				40C3E2F621B4BA980023A0E5 /* YCURLRequest.h */,
+				40C3E2F421B4BA980023A0E5 /* YCURLRequest.m */,
+				40C3E2F521B4BA980023A0E5 /* YCURLRequest_InternalParams.h */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		40C3E2F721B4BA980023A0E5 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				40C3E2F921B4BA980023A0E5 /* YCNetworkManager.h */,
+				40C3E2F821B4BA980023A0E5 /* YCNetworkManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		40C3E2FB21B4BA980023A0E5 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				40C3E2FC21B4BA980023A0E5 /* YCNetworkEngine.h */,
+				40C3E2FD21B4BA980023A0E5 /* YCNetworkEngine.m */,
+			);
+			path = Engine;
+			sourceTree = "<group>";
+		};
+		40C3E32021B4BE620023A0E5 /* Podspec */ = {
+			isa = PBXGroup;
+			children = (
+				40C3E32121B4BF070023A0E5 /* README.md */,
+				40C3E32221B4BF070023A0E5 /* YCNetworking.podspec */,
+			);
+			path = Podspec;
+			sourceTree = "<group>";
+		};
+		D2BC49B33BFAF61C178A4885 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				213CB90B605CF0DCDFA6AEC3 /* Pods-YCNetworking.debug.xcconfig */,
+				F9128B57D715ED756C0BD6CD /* Pods-YCNetworking.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		40C3E2A421B4BA260023A0E5 /* YCNetworking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40C3E2BB21B4BA270023A0E5 /* Build configuration list for PBXNativeTarget "YCNetworking" */;
+			buildPhases = (
+				49DF5649A5FAA73DD59B6FD0 /* [CP] Check Pods Manifest.lock */,
+				40C3E2A121B4BA260023A0E5 /* Sources */,
+				40C3E2A221B4BA260023A0E5 /* Frameworks */,
+				40C3E2A321B4BA260023A0E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YCNetworking;
+			productName = YCNetworking;
+			productReference = 40C3E2A521B4BA260023A0E5 /* YCNetworking.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		40C3E29D21B4BA260023A0E5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "安跃超";
+				TargetAttributes = {
+					40C3E2A421B4BA260023A0E5 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 40C3E2A021B4BA260023A0E5 /* Build configuration list for PBXProject "YCNetworking" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 40C3E29C21B4BA260023A0E5;
+			productRefGroup = 40C3E2A621B4BA260023A0E5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				40C3E2A421B4BA260023A0E5 /* YCNetworking */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		40C3E2A321B4BA260023A0E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40C3E30221B4BA980023A0E5 /* iPhoneTypeDefine.plist in Resources */,
+				40C3E2B521B4BA270023A0E5 /* LaunchScreen.storyboard in Resources */,
+				40C3E32421B4BF070023A0E5 /* YCNetworking.podspec in Resources */,
+				40C3E32321B4BF070023A0E5 /* README.md in Resources */,
+				40C3E2B221B4BA270023A0E5 /* Assets.xcassets in Resources */,
+				40C3E2B021B4BA260023A0E5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		49DF5649A5FAA73DD59B6FD0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YCNetworking-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		40C3E2A121B4BA260023A0E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40C3E2AD21B4BA260023A0E5 /* ViewController.m in Sources */,
+				40C3E30521B4BA980023A0E5 /* YCFormDataConfig.m in Sources */,
+				40C3E30B21B4BA980023A0E5 /* YCBaseObjReformer.m in Sources */,
+				40C3E31121B4BA980023A0E5 /* YCURLRequest.m in Sources */,
+				40C3E30021B4BA980023A0E5 /* YCDebugMessage.m in Sources */,
+				40C3E31221B4BA980023A0E5 /* YCNetworkManager.m in Sources */,
+				40C3E30921B4BA980023A0E5 /* YCSecurityPolicyConfig.m in Sources */,
+				40C3E31C21B4BAFE0023A0E5 /* YCRequestPresenter.m in Sources */,
+				40C3E30621B4BA980023A0E5 /* YCNetworkRequestConfig.m in Sources */,
+				40C3E30821B4BA980023A0E5 /* YCNetworkConfig.m in Sources */,
+				40C3E30721B4BA980023A0E5 /* YCNetworkTipsConfig.m in Sources */,
+				40C3E31621B4BAF30023A0E5 /* YCAPICenter+home.m in Sources */,
+				40C3E2B821B4BA270023A0E5 /* main.m in Sources */,
+				40C3E30E21B4BA980023A0E5 /* YCRequestGroup.m in Sources */,
+				40C3E30C21B4BA980023A0E5 /* YCURLResult.m in Sources */,
+				40C3E30D21B4BA980023A0E5 /* YCURLResponse.m in Sources */,
+				40C3E2FE21B4BA980023A0E5 /* YCNetworkLogger.m in Sources */,
+				40C3E31F21B4BB040023A0E5 /* YCTakePhotoTool.m in Sources */,
+				40C3E2FF21B4BA980023A0E5 /* UIDevice+deviceInfo.m in Sources */,
+				40C3E31321B4BA980023A0E5 /* YCNetworkEngine.m in Sources */,
+				40C3E31021B4BA980023A0E5 /* YCAPIRequest.m in Sources */,
+				40C3E30F21B4BA980023A0E5 /* YCTaskRequest.m in Sources */,
+				40C3E31921B4BAF80023A0E5 /* YCPresenter.m in Sources */,
+				40C3E2AA21B4BA260023A0E5 /* AppDelegate.m in Sources */,
+				40C3E30A21B4BA980023A0E5 /* YCAPICenter.m in Sources */,
+				40C3E30321B4BA980023A0E5 /* YCNetworkLoggerConfig.m in Sources */,
+				40C3E30121B4BA980023A0E5 /* NSNull+ToDictionary.m in Sources */,
+				40C3E30421B4BA980023A0E5 /* YCNetworkPolicyConfig.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		40C3E2AE21B4BA260023A0E5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40C3E2AF21B4BA260023A0E5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		40C3E2B321B4BA270023A0E5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40C3E2B421B4BA270023A0E5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		40C3E2B921B4BA270023A0E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		40C3E2BA21B4BA270023A0E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		40C3E2BC21B4BA270023A0E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 213CB90B605CF0DCDFA6AEC3 /* Pods-YCNetworking.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A65PS66PYG;
+				INFOPLIST_FILE = YCNetworking/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "---.YCNetworking";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		40C3E2BD21B4BA270023A0E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9128B57D715ED756C0BD6CD /* Pods-YCNetworking.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A65PS66PYG;
+				INFOPLIST_FILE = YCNetworking/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "---.YCNetworking";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		40C3E2A021B4BA260023A0E5 /* Build configuration list for PBXProject "YCNetworking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40C3E2B921B4BA270023A0E5 /* Debug */,
+				40C3E2BA21B4BA270023A0E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40C3E2BB21B4BA270023A0E5 /* Build configuration list for PBXNativeTarget "YCNetworking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40C3E2BC21B4BA270023A0E5 /* Debug */,
+				40C3E2BD21B4BA270023A0E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 40C3E29D21B4BA260023A0E5 /* Project object */;
+}
