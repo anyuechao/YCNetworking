@@ -12,7 +12,7 @@
 #import "YCRequestPresenter.h"
 #import "YCTakePhotoTool.h"
 
-@interface ViewController ()<YCRequestGroupDelegate,YCURLRequestDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+@interface ViewController ()<YCRequestGroupDelegate,YCURLRequestDelegate,YCNetworkCustomLoggerDelegate>
 @property (nonatomic,strong)YCRequestPresenter *ycrp;
 @property (nonatomic,strong)YCTaskRequest *taskRequest;
 @property (nonatomic,assign)BOOL isPause;
@@ -27,19 +27,30 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
+    [YCNetworkLogger setupConfig:^(YCNetworkLoggerConfig * _Nonnull config) {
+        config.enableLocalLog = YES;
+        config.logAutoSaveCount = 5;
+        config.loggerType = YCNetworkLoggerTypePlist;
+    }];
+
+    [YCNetworkLogger setDelegate:self];
+    [YCNetworkLogger startLogging];
+
     self.isPause = YES;
     YCRequestPresenter *ycrp = [[YCRequestPresenter alloc] initWithView:self.view];
     @yc_weakify(self);
     ycrp.handleAction = ^{
         @yc_strongify(self);
 
-//                [self textHome];
+                [self textHome];
         //分组请求
-                [self textAPIGroup];
+//                [self textAPIGroup];
         //文件下载
 //                [self startdownLoadVideo];
         //文件上传
 //        [self startUpload];
+        //videos上传
+//         [self startUploadVideo];
     };
     _ycrp = ycrp;
 }
@@ -151,6 +162,32 @@
     }];
 }
 
+- (void)startUploadVideo {
+    @yc_weakify(self);
+    [[YCTakePhotoTool defaultTool] actionVideo:self videoHandle:^(NSString *videoUrl) {
+        @yc_strongify(self);
+        [YCAPICenter.uploadVideo.formData(^(id<YCMultipartFormDataProtocol>formData){
+            [formData appendPartWithFileURL:[NSURL fileURLWithPath:videoUrl] name:@"uploadfile" fileName:@"uploadfile" mimeType:@"video/.mov" error:nil];
+//            [formData appendPartWithFileURL:videoUrl name:@"uploadfile" error:nil];
+//            [formData appendPartWithFileData:videoUrl name:@"uploadfile" fileName:@"uploadfile" mimeType:@"video/.mov"];
+        })
+         .progress(^(NSProgress *proc){
+            NSLog(@"\n进度=====\n当前进度：%@", proc);
+            NSString *pro = [NSString stringWithFormat:@"\n进度=====\n当前进度：%@", proc];
+            [self.ycrp logInfo:pro];
+        })
+         .success(^(id response){
+            NSLog(@"%@",response);
+            NSString *str = [NSString stringWithFormat:@"文件上传成功成功%@",response];
+            [self.ycrp logInfo:str];
+        })
+         .failure(^(NSError *error){
+            NSString *log = [NSString stringWithFormat:@"文件上传失败 %@",error.localizedDescription];
+            [self.ycrp logError:log];
+        }) start];
+    }];
+}
+
 /**
  *  文件下载
  **/
@@ -176,6 +213,14 @@
 // 请求已经发出
 - (void)requestDidSent:(nullable __kindof YCURLRequest *)request {
 
+}
+
+- (NSDictionary *)customInfoWithMessage:(YCDebugMessage *)message {
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    dict[@"Time"] = message.timeString;
+    dict[@"RequestObject"] = [message.requestObject toDictionary];
+    dict[@"Response"] = [message.response toDictionary];
+    return [dict copy];
 }
 
 - (YCTaskRequest *)taskRequest {

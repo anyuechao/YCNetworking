@@ -7,9 +7,13 @@
 //
 
 #import "YCTakePhotoTool.h"
+#import <Photos/Photos.h>
 
+#define PHOTOCACHEPATH [NSTemporaryDirectory() stringByAppendingPathComponent:@"photoCache"]
+#define VIDEOCACHEPATH [NSTemporaryDirectory() stringByAppendingPathComponent:@"videoCache"]
 @interface YCTakePhotoTool()<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 @property (nonatomic,copy)imageHandle imageHandle;
+@property (nonatomic,copy)VideoHandle videoHandle;
 @property (nonatomic , strong)UIImagePickerController *imagePicker;
 @property (nonatomic,strong)UIViewController *currentVC;
 @end
@@ -141,6 +145,41 @@
             self.imageHandle(image);
         }
     }
+    if ([mediaType isEqualToString:(NSString *)kUTTypeMovie]) {
+//        NSURL *videoUrl = [info objectForKey:UIImagePickerControllerMediaURL];
+//        if (self.videoHandle){
+//            self.videoHandle(videoUrl);
+//        }
+        if (picker.sourceType == UIImagePickerControllerSourceTypeCamera) {
+
+            //如果是拍摄的视频, 则把视频保存在系统多媒体库中
+            NSLog(@"video path: %@", info[UIImagePickerControllerMediaURL]);
+
+//            ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+//            [library writeVideoAtPathToSavedPhotosAlbum:info[UIImagePickerControllerMediaURL] completionBlock:^(NSURL *assetURL, NSError *error) {
+//
+//                if (!error) {
+//
+//                    NSLog(@"视频保存成功");
+//                } else {
+//
+//                    NSLog(@"视频保存失败");
+//                }
+//            }];
+            //生成视频名称
+
+        }
+            //将视频存入缓存
+            NSLog(@"将视频存入缓存");
+            [self saveVideoFromPath:info[UIImagePickerControllerMediaURL] toCachePath:[VIDEOCACHEPATH stringByAppendingPathComponent:@"mediaName"]];
+
+           NSString *videoUrl = [VIDEOCACHEPATH stringByAppendingPathComponent:@"mediaName"];
+                    if (self.videoHandle){
+                        self.videoHandle(videoUrl);
+                    }
+
+    }
+
     //退出
     [self exitWithPickerController:picker];
 }
@@ -148,6 +187,115 @@
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
     [self exitWithPickerController:picker];
+}
+
+- (void)actionVideo:(UIViewController *)vc videoHandle:(VideoHandle)videoHandle {
+    _videoHandle = videoHandle;
+
+    [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+        switch (status) {
+            case PHAuthorizationStatusAuthorized:
+                NSLog(@"PHAuthorizationStatusAuthorized");
+                break;
+            case PHAuthorizationStatusDenied:
+                NSLog(@"PHAuthorizationStatusDenied");
+                break;
+            case PHAuthorizationStatusNotDetermined:
+                NSLog(@"PHAuthorizationStatusNotDetermined");
+                break;
+            case PHAuthorizationStatusRestricted:
+                NSLog(@"PHAuthorizationStatusRestricted");
+                break;
+        }
+    }];
+
+    BOOL islAuthorized = [self checkCameraRightWithSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+    BOOL iscAuthorized =[self checkCameraRightWithSourceType:UIImagePickerControllerSourceTypeCamera];
+    BOOL ispAuthorized =[self checkCameraRightWithSourceType:UIImagePickerControllerSourceTypeSavedPhotosAlbum];
+
+    if (islAuthorized && iscAuthorized && ispAuthorized){
+        UIAlertController *alertController = \
+        [UIAlertController alertControllerWithTitle:@""
+                                            message:@"上传视频"
+                                     preferredStyle:UIAlertControllerStyleActionSheet];
+
+        UIAlertAction *photoAction = \
+        [UIAlertAction actionWithTitle:@"从视频库选择"
+                                 style:UIAlertActionStyleDefault
+                               handler:^(UIAlertAction * _Nonnull action) {
+
+                                   NSLog(@"从视频库选择");
+                                   self.imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+                                   self.imagePicker.mediaTypes = @[(NSString *)kUTTypeMovie];
+                                   self.imagePicker.allowsEditing = NO;
+
+                                   [vc presentViewController:self.imagePicker animated:YES completion:nil];
+                               }];
+
+        UIAlertAction *cameraAction = \
+        [UIAlertAction actionWithTitle:@"录像"
+                                 style:UIAlertActionStyleDefault
+                               handler:^(UIAlertAction * _Nonnull action) {
+
+                                   NSLog(@"录像");
+                                   self.imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+                                   self.imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+                                   self.imagePicker.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeCamera];
+                                   self.imagePicker.videoQuality = UIImagePickerControllerQualityType640x480;
+                                   self.imagePicker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModeVideo;
+                                   self.imagePicker.allowsEditing = YES;
+
+                                   [vc presentViewController:self.imagePicker animated:YES completion:nil];
+                               }];
+
+        UIAlertAction *cancelAction = \
+        [UIAlertAction actionWithTitle:@"取消"
+                                 style:UIAlertActionStyleCancel
+                               handler:^(UIAlertAction * _Nonnull action) {
+
+                                   NSLog(@"取消");
+                               }];
+
+        [alertController addAction:photoAction];
+        [alertController addAction:cameraAction];
+        [alertController addAction:cancelAction];
+
+        [vc presentViewController:alertController animated:YES completion:nil];
+
+        return;
+    }else{
+        UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"提示" message:@"访问没有权限,请在隐私设置中开启" preferredStyle:UIAlertControllerStyleAlert];
+        __weak typeof(self) weakSelf = self;
+        [alertVC addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [weakSelf.currentVC dismissViewControllerAnimated:YES completion:nil];
+        }]];
+        [self.currentVC presentViewController:alertVC animated:YES completion:nil];
+        return;
+    }
+}
+
+//将视频保存到缓存路径中
+- (void)saveVideoFromPath:(NSString *)videoPath toCachePath:(NSString *)path {
+
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if (![fileManager fileExistsAtPath:VIDEOCACHEPATH]) {
+
+        NSLog(@"路径不存在, 创建路径");
+        [fileManager createDirectoryAtPath:VIDEOCACHEPATH
+               withIntermediateDirectories:YES
+                                attributes:nil
+                                     error:nil];
+    } else {
+
+        NSLog(@"路径存在");
+    }
+
+    NSError *error;
+    [fileManager copyItemAtPath:videoPath toPath:path error:&error];
+    if (error) {
+
+        NSLog(@"文件保存到缓存失败");
+    }
 }
 
 #pragma mark- =====================getter method=====================

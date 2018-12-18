@@ -64,7 +64,12 @@ YCStrongSynthesize(live, [YCAPIRequest request]
 
 YCStrongSynthesize(upload, [YCAPIRequest request]
                    .setMethod(POST)
-                   .setCustomURL(@"http://192.168.1.16:8082/api/testpost/upload")
+                   .setCustomURL(@"http://10.2.0.55:8082/api/testpost/upload")
+                   .setObjReformerDelegate(self.defaultReformer))
+
+YCStrongSynthesize(uploadVideo, [YCAPIRequest request]
+                   .setMethod(POST)
+                   .setCustomURL(@"http://10.2.0.55:8082/api/testpost/uploadVideo")
                    .setObjReformerDelegate(self.defaultReformer))
 
 //[[YCAPIRequest request].setMethod(GET)

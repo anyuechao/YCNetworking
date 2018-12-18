@@ -15,6 +15,7 @@ YCStrongProperty(center)
 YCStrongProperty(room)
 YCStrongProperty(live)
 YCStrongProperty(upload)
+YCStrongProperty(uploadVideo)
 
 //@property (nonatomic, strong, setter=home:, getter=home) YCAPIRequest *home;
 //

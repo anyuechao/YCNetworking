@@ -12,6 +12,7 @@
 #import <UIKit/UIKit.h>
 
 typedef void (^imageHandle)(UIImage *image);
+typedef void (^VideoHandle)(NSString *videoUrl);
 
 @interface YCTakePhotoTool : NSObject
 
@@ -20,6 +21,9 @@ typedef void (^imageHandle)(UIImage *image);
 - (void)catchPhotoWithSourceType:(UIImagePickerControllerSourceType)sourceType viewController:(UIViewController *)viewController imageHandle:(imageHandle)handle;
 
 - (void)catchPhotoWithAlertviewController:(UIViewController *)viewController imageHandle:(imageHandle)handle;
+
+- (void)actionVideo:(UIViewController *)vc videoHandle:(VideoHandle)videoHandle;
+
 
 
 @end
